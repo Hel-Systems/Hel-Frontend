@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+
+<body>
+    <div class="profile">
+        <div class="menu">
+            <ul>
+                <input type="radio" name="profile-menu" id="profile" checked>
+                <label for="profile">
+                    <li>Profile</li>
+                </label>
+                <input type="radio" name="profile-menu" id="my-orders">
+                <label for="my-orders">
+                    <li>My orders</li>
+                </label>
+                <input type="radio" name="profile-menu" id="support" disabled>
+                <label for="support">
+                    <li>Support</li>
+                </label>
+                <input type="radio" name="profile-menu" id="settings" disabled>
+                <label for="settings">
+                    <li>Settings</li>
+                </label>
+            </ul>
+        </div>
+        <main>
+            <header>
+                <h1>My profile</h1>
+                <button class="logout-btn">Log out</button>
+            </header>
+            <div class="personal-data">
+                <div class="sub-menu">
+                    <ul>
+                        <input type="radio" name="profile-sub-menu" id="edit-profile" checked>
+                        <label for="edit-profile">
+                            <li>Edit profile</li>
+                        </label>
+                        <input type="radio" name="profile-sub-menu" id="password">
+                        <label for="password">
+                            <li>Password</li>
+                        </label>
+                        <input type="radio" name="profile-sub-menu" id="delete-profile">
+                        <label for="delete-profile">
+                            <li>Delete profile</li>
+                        </label>
+                    </ul>
+                </div>
+                <div class="edit-profile-data">
+                    <div class="edit-inputs">
+                        <input type="text" placeholder="Name">
+                        <input type="email" placeholder="Email">
+                        <input type="tel" placeholder="Contact number">
+                        <input type="text" placeholder="Address">
+                        <button class="save-btn">Save</button>
+
+                    </div>
+                    <div class="side-bar">
+                        <div class="profile-photo">
+                            <img src="" alt="profile photo">
+                        </div>
+                    </div>
+                    <div class="edit-password hide">
+                        <input type="password" placeholder="Current password">
+                        <input type="password" placeholder="New password">
+                        <input type="password" placeholder="Confirm password">
+                        <button class="save-btn">Change</button>
+                    </div>
+                    <div class="delete-profile hide">
+                        <input type="password" placeholder="Current password">
+                        <button class="save-btn">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="./profile.js"></script>
+</body>
+
+</html>

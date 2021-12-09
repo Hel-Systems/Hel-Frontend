@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+body  {
+    font-family: 'Roboto', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+li {
+    display: flex;
+}
+/* main page */
+.index {
+    background-color: whitesmoke;
+}
+.index header {
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.index .left-side-header {
+    width: 35vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5vw;
+}
+.index .right-side-header {
+    margin-right: 5vw;
+
+}
+.index .logo {
+    margin-right: 3vw;
+    margin-top: 25px;
+}
+.index .location a {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.index nav ul{
+    width: 50vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.index nav ul li {
+    height: 40px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    background-color: #EF7A85;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+.index nav ul li:first-child {
+    background-color: unset;
+    box-shadow: none;
+    width: unset;
+}
+.index nav a {
+    text-decoration: none;
+    color: white;
+}
+.index #become-a-client {
+    color: black;
+    text-decoration: underline;
+}
+
+.index main {
+    min-height: 85vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.index .banner {
+    width: 45vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5vw;   
+}
+.index .banner img {
+    width: 90%;
+    margin-top: 100px;
+}
+.index .banner button {
+    height: 60px;
+    width: 220px;
+    background-color: rgba(110, 68, 255, 0.2);
+    border: none;
+    border-radius: 10px;
+    color: rgba(110, 68, 255);
+    font-size: 18px;
+    margin-top: 100px;
+    box-shadow: 0px 4px 4px 0px #00000040;
+    font-weight: 400;
+}
+.index .description {
+    width: 50vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;
+    margin-right: 5vw;   
+
+}
+.index h1 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+    line-height: 55px;
+}
+.index .h1-wrapper {
+    width: 90%;
+}
+.index .h1-wrapper span {
+    color: rgba(110, 68, 255);
+}
+.index .p-wrapper {
+    width: 60%;
+}
+.index .p-wrapper p {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 20px;
+    text-align: justify;
+}
+/* registration */
+.register, .login {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EF7A85;
+}
+.register .registration, .login .logging {
+    height: 480px;
+    width: 350px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+    padding-top: 35px;
+}
+.login .logging {
+    height: 300px;
+}
+.register label, .login label {
+    cursor: pointer;
+    height: 45px;
+    width: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #EF7A85;
+    text-decoration: underline;
+    font-size: 14px;
+}
+.register #radio-individual, .login #radio-individual {
+    border-radius: 9px 0 0 9px;
+    border-right: 1px solid whitesmoke;
+}
+.register #radio-business, .login #radio-business {
+    border-radius: 0 9px 9px 0;
+}
+.register .customer input, .login .customer input {
+    display: none;
+}
+.register input:checked + label, .login input:checked + label {
+    background-color: whitesmoke;
+}
+.register .customer, .login .customer {
+    width: 320px;
+    height: 45px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+}
+.register input, .login input {
+    width: 300px;
+    height: 35px;
+    margin-bottom: 20px;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+.register .registration img, .login .logging img {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 15px;
+}
+.register .registration button, .login .logging button {
+    width: 120px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 8px;
+}
+.register #sign-up, .login #log-in {
+    background-color: rgba(110, 68, 255);
+    color: white;
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+.register #log-in, .login #sign-up {
+    background-color: unset;
+    color: rgba(110, 68, 255);
+}
+
+/* profile */
+.profile {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile .menu {
+    height: 100vh;
+    width: 20vw;
+    background-color: #EF7A85;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+}
+.profile .menu ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin-top: 15vh;
+}
+.profile .menu ul li {
+    margin: 15px;
+    font-size: 18px;
+}
+.profile .menu label {
+    color: rgba(245, 245, 245, 0.4);
+}
+.profile .menu input {
+    display: none
+}
+.profile label {
+    z-index: 10;
+}
+.profile input:checked + label {
+    color: white;
+}
+
+.profile main {
+    height: 100vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile header {
+    width: 80vw;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.profile header h1 {
+    color: rgba(110, 68, 255);
+    margin-left: 5vw;
+}
+.profile .logout-btn, .save-btn {
+    width: 120px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 8px;
+    margin-right: 100px;
+    background-color: #EF7A85;
+    color: white;
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+.profile .personal-data {
+    width: 80vw;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile .sub-menu {
+    height: 85vh;
+    width: 20vw;
+    border-right: 1px solid whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+}
+
+.profile .edit-profile-data {
+    height: 85vh;
+    width: 60vw;
+}
+.profile .sub-menu input {
+    display: none
+}
+.profile .sub-menu label {
+    z-index: 10;
+    color: rgba(0, 0, 0, 0.4);
+}
+.profile .sub-menu input:checked + label {
+    color: black;
+}
+.profile .sub-menu li {
+    margin: 31px;
+    font-size: 16px;
+}
+.profile .sub-menu li:first-child {
+    margin-top: 15px;
+}
+.edit-profile-data {
+    display: flex;
+    justify-content: space-between;
+}
+.edit-inputs {
+    width: 32vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.edit-inputs input, .edit-password input, .delete-profile input {
+    width: 300px;
+    height: 35px;
+    margin-bottom: 20px;
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+.side-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 20vw;
+    margin-right: 100px;
+}
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.save-btn {
+    margin-right: 0;
+    margin-top: 20px;
+}
+.edit-password {
+    width: 32vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.edit-password .save-btn, .delete-profile .save-btn {
+    margin-top: 20px;
+}
+.delete-profile {
+    width: 32vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hide {
+    display: none;
+}
