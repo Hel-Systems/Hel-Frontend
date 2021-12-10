@@ -15,6 +15,7 @@ a {
 li {
     display: flex;
 }
+
 /* main page */
 .index {
     background-color: whitesmoke;
@@ -138,11 +139,18 @@ li {
 }
 .index .p-wrapper p {
     font-size: 16px;
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(148, 95, 95, 0.5);
     line-height: 20px;
     text-align: justify;
 }
 /* registration */
+.form-title {
+    color: rgba(110, 68, 255);
+    margin-bottom: 15px;
+    font-size: 25px;
+    font-weight: normal;
+}
+
 .register, .login {
     height: 100vh;
     display: flex;
@@ -151,7 +159,7 @@ li {
     background-color: #EF7A85;
 }
 .register .registration, .login .logging {
-    height: 480px;
+    height: 540px;
     width: 350px;
     background-color: white;
     display: flex;
@@ -231,7 +239,11 @@ li {
 .register #log-in, .login #sign-up {
     background-color: unset;
     color: rgba(110, 68, 255);
+    font-size: 12px;
+    margin-top: 10px;
 }
+
+
 
 /* profile */
 .profile {
@@ -399,4 +411,7 @@ li {
 }
 .hide {
     display: none;
+}
+.not-filled {
+    background-color: rgb(255, 202, 212);
 }

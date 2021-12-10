@@ -2,8 +2,10 @@
 
 const form = document.querySelector('.registration');
 
+// form validation and if all correcct - post request
 form.addEventListener('submit', (event) => {
   event.preventDefault();
+
   if (form.elements['password'].value == form.elements['confirm'].value) {
     fetch('http://localhost:8080/api/users', {
       method: 'POST',
@@ -23,5 +25,8 @@ form.addEventListener('submit', (event) => {
           window.location.href = "/login.html"
         }
       })
+  } else {
+    form.elements['password'].classList.add('not-filled');
+    form.elements['confirm'].classList.add('not-filled');
   }
 });
