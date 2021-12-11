@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Create an order</title>
+</head>
+
+<body>
+  <div class="main-create">
+    <div class="create">
+      <form action="/create" method="post" class="create-form">
+        <p class="form-status"></p>
+        <h1 class="form-title">Creating an order</h1>
+        <a href="/index.html"><img src="./src/close.png" alt="" srcset=""></a>
+        <input type="text" placeholder="Where form" name="wherefrom" required id="from">
+        <input type="text" placeholder="Where to" name="whereto" required id="to">
+        <input type="text" placeholder="Description" name="description">
+        <input type="text" placeholder="Distance" name="distance" disabled id="distance">
+        <input type="price" placeholder="Estimated price" name="confirm" disabled id="price">
+        <button id="calculate">Calculate</button>
+        <button id="create">Create an order</button>
+      </form>
+    </div>
+    <div class="create-map" id="googleMap"></div>
+  </div>
+  <div id="output">
+    <h1>empty</h1>
+  </div>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9jarr8nbzL0h8ICg5rdfvh9CoQ5ybRds&libraries=places">
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+  </script>
+  <script src="create.js"></script>
+</body>
+
+</html>

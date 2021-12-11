@@ -7,8 +7,10 @@ button {
     cursor: pointer;
 }
 body  {
-    font-family: monospace;
+    font-family: Roboto;
+
 }
+
 a {
     text-decoration: none;
 }
@@ -148,7 +150,7 @@ li {
     color: rgba(110, 68, 255);
     margin-bottom: 15px;
     font-size: 25px;
-    font-weight: normal;
+    
 }
 
 .register, .login {
@@ -158,8 +160,8 @@ li {
     align-items: center;
     background-color: #EF7A85;
 }
-.register .registration, .login .logging {
-    height: 540px;
+.register .registration, .login .logging, .create-form {
+    height: 560px;
     width: 350px;
     background-color: white;
     display: flex;
@@ -181,7 +183,7 @@ li {
     justify-content: center;
     align-items: center;
     color: #EF7A85;
-    text-decoration: underline;
+    text-decoration: none;
     font-size: 14px;
 }
 .register #radio-individual, .login #radio-individual {
@@ -207,7 +209,7 @@ li {
     border: 1px solid whitesmoke;
     border-radius: 10px;
 }
-.register input, .login input {
+.register input, .login input, .create-form input {
     width: 300px;
     height: 35px;
     margin-bottom: 20px;
@@ -216,13 +218,13 @@ li {
     padding: 5px 10px;
     font-size: 14px;
 }
-.register .registration img, .login .logging img {
+.register .registration img, .login .logging img, .create-form img {
     position: absolute;
     top: 20px;
     right: 20px;
     width: 15px;
 }
-.register .registration button, .login .logging button {
+.register .registration button, .login .logging button, .create-form button {
     width: 120px;
     height: 35px;
     display: flex;
@@ -231,10 +233,11 @@ li {
     border: none;
     border-radius: 8px;
 }
-.register #sign-up, .login #log-in {
+.register #sign-up, .login #log-in, .create-form #calculate, .create-form #create{
     background-color: rgba(110, 68, 255);
     color: white;
     box-shadow: 0px 4px 4px 0px #00000040;
+    font-size: 13px;
 }
 .register #log-in, .login #sign-up {
     background-color: unset;
@@ -465,4 +468,36 @@ li {
 }
 .order-bar img {
     width: 20vw;
+}
+/* Creating order */
+.main-create {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EF7A85;
+}
+.create-form {
+    background-color: white;
+}
+.create-form #calculate {
+    color: rgba(110, 68, 255);
+    background-color: white;
+    box-shadow: none;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+.create {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.create-map {
+    width: 660px;
+    height: 560px;
+    background-color: black;
+    margin-left: 20px;
+    padding: 8px;
+    border-radius: 10px;
 }
