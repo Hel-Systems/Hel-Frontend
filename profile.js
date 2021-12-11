@@ -1,21 +1,26 @@
 'use strict';
 
 let orders = [];
+let nameInput = document.querySelector('#name-input');
+let emailInput = document.querySelector('#email-input');
+let numberInput = document.querySelector('#number-input');
+let addressInput = document.querySelector('#address-input');
 
-// if (window.localStorage.getItem("current-user") !== '') {
-//   fetch('http://localhost:8080/profile', {
-//     maethod: 'GET',
-//     body: JSON.stringify({
-//       email: window.localStorage.getItem("current-user")
-//     }),
-//     headers: {
-//       "Content-type": "application/json; charset=UTF-8"
-//     }
-//   })
-//     .then(response => {
 
-//     })
-// }
+
+if (window.localStorage.getItem("current-user") !== '') {
+  fetch(`http://localhost:8080/api/email/${window.localStorage.getItem("current-user")}`, {
+    method: 'GET',
+    headers: {
+      "Content-type": "application/json; charset=UTF-8"
+    }
+  })
+    .then(response => {
+      if (response.status == 200) {
+        console.log(response);
+      }
+    })
+}
 
 // showing main menu options 
 document.querySelector('#my-orders').addEventListener('change', () => {

@@ -432,7 +432,7 @@ li {
     align-items: center;
 }
 .order-table {
-    width: 60vw;
+    width: 80vw;
     height: 85vh;
     display: flex;
     flex-direction: column;
