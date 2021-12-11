@@ -2,12 +2,12 @@
 
 const form = document.querySelector('.registration');
 
-// form validation and if all correcct - post request
+// registration form validation and if all correcct - post request
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 
   if (form.elements['password'].value == form.elements['confirm'].value) {
-    fetch('http://localhost:8080/api/users', {
+    fetch('http://localhost:8080/signup', {
       method: 'POST',
       body: JSON.stringify({
         firstname: form.elements['firstname'].value,
@@ -23,6 +23,8 @@ form.addEventListener('submit', (event) => {
       .then(response => {
         if (response.status == 200) {
           window.location.href = "/login.html"
+        } else {
+          document.querySelector('.form-status').textContent = 'User alreay exists';
         }
       })
   } else {

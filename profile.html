@@ -13,13 +13,13 @@
     <div class="profile">
         <div class="menu">
             <ul>
-                <input type="radio" name="profile-menu" id="profile" checked>
-                <label for="profile">
-                    <li>Profile</li>
-                </label>
-                <input type="radio" name="profile-menu" id="my-orders">
+                <input type="radio" name="profile-menu" id="my-orders" checked>
                 <label for="my-orders">
                     <li>My orders</li>
+                </label>
+                <input type="radio" name="profile-menu" id="profile">
+                <label for="profile">
+                    <li>Profile</li>
                 </label>
                 <input type="radio" name="profile-menu" id="support" disabled>
                 <label for="support">
@@ -33,9 +33,40 @@
         </div>
         <main>
             <header>
-                <h1>My profile</h1>
+                <h1 id="profile-title">My orders</h1>
                 <button class="logout-btn">Log out</button>
             </header>
+            <div class="orders">
+                <div class="order-table">
+                    <div class="order-table-head">
+                        <div class="order-id">ID</div>
+                        <div class="order-description">Description</div>
+                        <div class="order-from">From</div>
+                        <div class="order-to">To</div>
+                        <div class="order-status">Status</div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="order-table-row">
+                        <div class="order-id">537</div>
+                        <div class="order-description">Flowers</div>
+                        <div class="order-from">Kitarakuja 3A 18</div>
+                        <div class="order-to">Kaarikuja 2B 12</div>
+                        <div class="order-status">Created</div>
+                    </div>
+                    <div class="order-table-row">
+                        <div class="order-id">416</div>
+                        <div class="order-description">Food</div>
+                        <div class="order-from">Mikkola 15 4</div>
+                        <div class="order-to">Sivatuja 7 154</div>
+                        <div class="order-status">Delivered</div>
+                    </div>
+
+                </div>
+                <div class="order-bar">
+                    <img src="https://maps.googleapis.com/maps/api/staticmap?markers=color:blue|Helsinki,Kitarakuja,3A|Helsinki,Kaarikuja,2B&size=400x400&key=AIzaSyB9jarr8nbzL0h8ICg5rdfvh9CoQ5ybRds"
+                        alt="" srcset="">
+                </div>
+            </div>
             <div class="personal-data">
                 <div class="sub-menu">
                     <ul>

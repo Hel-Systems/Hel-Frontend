@@ -7,7 +7,7 @@ button {
     cursor: pointer;
 }
 body  {
-    font-family: 'Roboto', sans-serif;
+    font-family: monospace;
 }
 a {
     text-decoration: none;
@@ -168,7 +168,7 @@ li {
     align-items: center;
     position: relative;
     border-radius: 10px;
-    padding-top: 35px;
+    padding-top: 15px;
 }
 .login .logging {
     height: 300px;
@@ -320,7 +320,7 @@ li {
 .profile .personal-data {
     width: 80vw;
     height: 85vh;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
@@ -414,4 +414,55 @@ li {
 }
 .not-filled {
     background-color: rgb(255, 202, 212);
+}
+.form-status {
+    height: 20px;
+}
+
+/* orders and orders */
+
+.orders {
+    width: 80vw;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.order-table {
+    width: 60vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+}
+.order-table-head, .order-table-row, .line {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+.order-table-head {
+    color: grey;
+}
+.line {
+    width: 90%;
+    margin-left: 5%;
+    height: 0px;
+    border-bottom: 1px solid grey;
+}
+
+.order-id, .order-description, .order-from, .order-to, .order-status {
+    width: 140px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+} 
+.order-bar {
+    width: 20vw;
+    height: 85vh;
+    background-color: lime;
+}
+.order-bar img {
+    width: 20vw;
 }
