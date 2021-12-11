@@ -8,8 +8,8 @@ form.addEventListener('submit', (event) => {
   fetch('http://localhost:8080/api/login', {
     method: 'POST',
     body: JSON.stringify({
-      email: form.elements['email'].value,
-      password: form.elements['password'].value
+      email: form.elements[0].value,
+      password: form.elements[1].value
     }),
     headers: {
       "Content-type": "application/json; charset=UTF-8"
@@ -18,7 +18,7 @@ form.addEventListener('submit', (event) => {
     .then(response => {
       if (response.status == 200) {
         // save in local storage current user that logged in
-        localStorage.setItem("current-user", form.elements['email'].value);
+        localStorage.setItem("current-user", form.elements[0].value);
         window.location.href = "/profile.html";
       } else {
         document.querySelector('.form-status').textContent = 'User not found';

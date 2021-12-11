@@ -7,7 +7,7 @@ form.addEventListener('submit', (event) => {
   event.preventDefault();
 
   if (form.elements['password'].value == form.elements['confirm'].value) {
-    fetch('http://localhost:8080/signup', {
+    fetch('http://localhost:8080/api/users', {
       method: 'POST',
       body: JSON.stringify({
         firstname: form.elements['firstname'].value,

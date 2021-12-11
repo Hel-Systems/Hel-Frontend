@@ -9,7 +9,7 @@ let addressInput = document.querySelector('#address-input');
 
 
 if (window.localStorage.getItem("current-user") !== '') {
-  fetch(`http://localhost:8080/api/email/${window.localStorage.getItem("current-user")}`, {
+  fetch(`http://localhost:8080/api/users/email/${window.localStorage.getItem("current-user")}`, {
     method: 'GET',
     headers: {
       "Content-type": "application/json; charset=UTF-8"
@@ -17,9 +17,16 @@ if (window.localStorage.getItem("current-user") !== '') {
   })
     .then(response => {
       if (response.status == 200) {
-        console.log(response);
+        response.json();
+      }
+      else {
+        console.log('response status is not 200');
       }
     })
+    .then(data => {
+      nameInput.value = data.firstname;
+      emailInput.value = data.email;
+    });
 }
 
 // showing main menu options 
