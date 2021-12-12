@@ -38,7 +38,7 @@ if (window.localStorage.getItem("current-user")) {
 
 //load orders created by a user
 if (window.localStorage.getItem("current-user")) {
-  fetch(`http://localhost:8080/api/orders/user/${localStorage.getItem('user-id')}}`, {
+  fetch(`http://localhost:8080/api/orders/user/${localStorage.getItem('user-id')}`, {
     method: 'GET',
     headers: {
       "Content-type": "application/json; charset=UTF-8"
@@ -47,10 +47,10 @@ if (window.localStorage.getItem("current-user")) {
     .then(response => response.json())
     .then(data => {
       console.log(data);
-      let newRowHtml;
+      let newRowHtml = '<div class="order-table-head"><div class="order-id">ID</div><div class="order-description">Description</div><div class="order-from">From</div><div class="order-to">To</div><div class="order-distance">Distance</div><div class="order-price">Price</div><div class="order-status">Status</div></div>';
       if (data !== undefined) {
         for (i = 0; i < data.length; i++) {
-          newRowHtml += `<div class="order-table-row" id="${data[i].userId}"><div class="order-id">${data[i].id}</div><div class="order-description">${data[i].description}</div><div class="order-from">${data[i].adressFrom}</div><div class="order-to">${data[i].adressTo}</div><div class="order-status">${data[i].status}</div></div>`;
+          newRowHtml += `<div class="order-table-row" id="${data[i].userId}"><div class="order-id">${data[i].id}</div><div class="order-description">${data[i].description}</div><div class="order-from">${data[i].adressFrom}</div><div class="order-to">${data[i].adressTo}</div><div class="order-distance">${data[i].distance} km</div><div class="order-price">${data[i].price} €</div><div class="order-status">${data[i].status}</div></div>`;
         }
         document.querySelector('.order-table').innerHTML = newRowHtml;
       } else if (data == null) {

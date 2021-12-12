@@ -453,7 +453,7 @@ li {
     border-bottom: 1px solid grey;
 }
 
-.order-id, .order-description, .order-from, .order-to, .order-status {
+.order-id, .order-description, .order-from, .order-to, .order-status, .order-price, .order-distance {
     width: 140px;
     height: 30px;
     display: flex;
