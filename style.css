@@ -276,6 +276,12 @@ li {
     margin: 15px;
     font-size: 18px;
 }
+.profile .menu a:visited {
+    color: rgba(110, 68, 255);
+}
+.profile .menu a {
+    color: rgba(110, 68, 255);
+}
 .profile .menu label {
     color: rgba(245, 245, 245, 0.4);
 }
@@ -431,13 +437,28 @@ li {
     justify-content: center;
     align-items: center;
 }
-.order-table {
+.avaliable-orders {
+    width: 80vw;
+    height: 85vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.my-deliveries {
+    width: 80vw;
+    height: 85vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.order-table, .order-table-avaliable, .delivery-table {
     width: 80vw;
     height: 85vh;
     display: flex;
     flex-direction: column;
+    margin-right: 100px;
 }
-.order-table-head, .order-table-row, .line {
+.order-table-head, .order-table-row, .line, .delivery-table-head {
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -453,7 +474,7 @@ li {
     border-bottom: 1px solid grey;
 }
 
-.order-id, .order-description, .order-from, .order-to, .order-status, .order-price, .order-distance {
+.order-id, .order-description, .order-from, .order-to, .order-status, .order-price, .order-distance, .order-change {
     width: 140px;
     height: 30px;
     display: flex;
@@ -461,6 +482,7 @@ li {
     align-items: center;
     font-size: 13px;
 } 
+
 .order-bar {
     width: 20vw;
     height: 85vh;

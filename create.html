@@ -12,23 +12,20 @@
 <body>
   <div class="main-create">
     <div class="create">
-      <form action="/create" method="post" class="create-form">
+      <div class="create-form">
         <p class="form-status"></p>
         <h1 class="form-title">Creating an order</h1>
         <a href="/index.html"><img src="./src/close.png" alt="" srcset=""></a>
         <input type="text" placeholder="Where form" name="wherefrom" required id="from">
         <input type="text" placeholder="Where to" name="whereto" required id="to">
-        <input type="text" placeholder="Description" name="description">
+        <input type="text" placeholder="Description" name="description" id='description'>
         <input type="text" placeholder="Distance" name="distance" disabled id="distance">
         <input type="price" placeholder="Estimated price" name="confirm" disabled id="price">
         <button id="calculate">Calculate</button>
         <button id="create">Create an order</button>
-      </form>
+      </div>
     </div>
     <div class="create-map" id="googleMap"></div>
-  </div>
-  <div id="output">
-    <h1>empty</h1>
   </div>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9jarr8nbzL0h8ICg5rdfvh9CoQ5ybRds&libraries=places">
   </script>

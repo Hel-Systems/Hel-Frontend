@@ -1,3 +1,9 @@
+// cheking for existing of current user
+
+if (!localStorage.getItem('current-user')) {
+  window.location.href = "/login.html";
+}
+
 let myLatLng = { lat: 38.3460, lng: -0.4907 };
 let mapOptions = {
   center: myLatLng,
@@ -6,6 +12,8 @@ let mapOptions = {
 
 };
 let duration;
+let distance;
+let price;
 //create map
 let map = new google.maps.Map(document.getElementById('googleMap'), mapOptions);
 
@@ -37,9 +45,13 @@ function calcRoute() {
   //pass the request to the route method
   directionsService.route(request, function (result, status) {
     if (status == google.maps.DirectionsStatus.OK) {
-      document.querySelector('#distance').value = (Math.round((parseInt(result.routes[0].legs[0].distance.text)) * 1.6)) + ' km';
+      distance = Math.round((parseInt(result.routes[0].legs[0].distance.text) * 1.6));
+      document.querySelector('#distance').value = distance + ' km';
+
       duration = result.routes[0].legs[0].duration.text;
-      document.querySelector('#price').value = (parseInt(result.routes[0].legs[0].distance.text) * 0.1 + 10) + ' €';
+      price = Math.round(parseInt(result.routes[0].legs[0].distance.text) * 0.1 + 10);
+      document.querySelector('#price').value = price + ' €';
+      duration = result.routes[0].legs[0].duration.text;
 
       //display route
       directionsDisplay.setDirections(result);
@@ -52,6 +64,38 @@ function calcRoute() {
       //show error message
     }
   });
-
 }
+
+// eventListener on button create order
+
+let fromInput = document.querySelector('#from');
+let toInput = document.querySelector('#to');
+let descriptionInput = document.querySelector('#description');
+
+
+
+document.querySelector('#create').addEventListener('click', () => {
+  fetch('http://localhost:8080/api/orders', {
+    method: 'POST',
+    body: JSON.stringify({
+      description: descriptionInput.value,
+      adressFrom: fromInput.value,
+      adressTo: toInput.value,
+      deliverymanEmail: 'Not assigned',
+      distance: distance,
+      price: price,
+      duration: duration,
+      status: 'Avaliable',
+      userId: localStorage.getItem('user-id')
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8"
+    }
+  })
+    .then(response => {
+      if (response.status == 200) {
+        window.location.href = "/profile.html";
+      }
+    })
+})
 
